@@ -1,0 +1,5 @@
+gulf_gov.db
+__pycache__/
+*.pyc
+predictions*.jsonl
+prompts.jsonl
