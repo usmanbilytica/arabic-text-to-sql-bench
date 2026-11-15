@@ -1,6 +1,6 @@
 # Gulf Text-to-SQL Bench
 
-[![Hugging Face dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/usmanbilytica/gulf-text-to-sql-bench) [![Release](https://img.shields.io/github/v/release/usmanbilytica/arabic-text-to-sql-bench)](https://github.com/usmanbilytica/arabic-text-to-sql-bench/releases) [![License: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE) [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
+[![Hugging Face dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/usmanbilytica/gulf-text-to-sql-bench) [![Kaggle leaderboard](https://img.shields.io/badge/Kaggle-Leaderboard-20BEFF?logo=kaggle&logoColor=white)](https://www.kaggle.com/benchmarks/usmanahmad/gulf-text-to-sql-bench) [![Release](https://img.shields.io/github/v/release/usmanbilytica/arabic-text-to-sql-bench)](https://github.com/usmanbilytica/arabic-text-to-sql-bench/releases) [![License: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE) [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
 
 **Can your LLM answer a business question asked in Gulf Arabic?**
 
@@ -77,11 +77,24 @@ Execution accuracy. The predicted query is run on the database and its result is
 
 ## Results
 
-No results yet. Run your model and open a pull request that adds a row here, including the model name, date and prompt setup.
+Execution accuracy on all 90 items, run on [Kaggle Benchmarks](https://www.kaggle.com/benchmarks/usmanahmad/gulf-text-to-sql-bench) in November 2026 with one zero-shot prompt (schema plus question, one fresh chat per item). Each language column is out of 30 questions. The live leaderboard, run logs and model outputs are public on Kaggle.
 
-| Model | en | ar_msa | ar_gulf | Submitted by |
+| Model | en | ar_msa | ar_gulf | Overall |
 |---|---|---|---|---|
-| | | | | |
+| Gemini 4 Argon | 96.7% | 96.7% | 100.0% | **97.8%** |
+| GPT-6.1 Sol | 96.7% | 96.7% | 96.7% | **96.7%** |
+| Gemini 3.8 Flash | 93.3% | 96.7% | 100.0% | **96.7%** |
+| Claude Sonnet 5.5 | 90.0% | 93.3% | 96.7% | **93.3%** |
+| Grok 4.7 | 93.3% | 86.7% | 96.7% | **92.2%** |
+| gpt-oss-120b | 100.0% | 86.7% | 76.7% | **87.8%** |
+
+What stands out:
+
+- The leading proprietary models are close to the ceiling, and several do as well or better in Gulf dialect than in English, so 30 questions is not yet enough to separate them.
+- The open-weights gpt-oss-120b is perfect in English but loses 23 points in Gulf dialect. That gap is the risk this benchmark was built to measure.
+- Results are from single runs; small differences (one or two questions) are within run-to-run noise.
+
+To add a model, run it with `make_prompts.py` and `evaluate.py` (or add it on Kaggle) and open a pull request with a row, the date and your prompt setup.
 
 ## Roadmap
 
