@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this benchmark, please cite it as below."
+title: "Gulf Text-to-SQL Bench: English, Modern Standard Arabic and Gulf Dialect"
+authors:
+  - family-names: Ahmad
+    given-names: Usman
+    affiliation: Bilytica
+repository-code: "https://github.com/usmanbilytica/arabic-text-to-sql-bench"
+abstract: "A Text-to-SQL benchmark that asks the same 30 business questions in English, Modern Standard Arabic and Gulf Arabic dialect (90 items) over a synthetic Saudi public-sector SQLite database, scored by execution accuracy."
+keywords:
+  - text-to-sql
+  - arabic
+  - gulf-arabic
+  - benchmark
+  - llm-evaluation
+license: MIT
+version: 0.1.0
+date-released: "2026-11-15"
