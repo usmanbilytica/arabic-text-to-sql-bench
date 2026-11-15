@@ -1,5 +1,7 @@
 # Gulf Text-to-SQL Bench
 
+[![Hugging Face dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/usmanbilytica/gulf-text-to-sql-bench) [![Release](https://img.shields.io/github/v/release/usmanbilytica/arabic-text-to-sql-bench)](https://github.com/usmanbilytica/arabic-text-to-sql-bench/releases) [![License: MIT](https://img.shields.io/badge/code-MIT-blue)](LICENSE) [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey)](https://creativecommons.org/licenses/by/4.0/)
+
 **Can your LLM answer a business question asked in Gulf Arabic?**
 
 Most Text-to-SQL benchmarks are English-only. In Saudi Arabia and the wider GCC, real users ask the same question three ways: in English, in Modern Standard Arabic, and in everyday Gulf dialect. This benchmark tests all three on the same database, so you can see exactly where a model's accuracy drops.
